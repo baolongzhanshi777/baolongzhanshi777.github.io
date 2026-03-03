@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>周金鹏 · 网络工程 / 网络安全工程师个人简历</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="周金鹏 - 网络工程 / 网络安全工程师个人简历" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0f172a;
+      --bg-elevated: #020617;
+      --card: #020617;
+      --primary: #38bdf8;
+      --primary-soft: rgba(56, 189, 248, 0.12);
+      --text-main: #e5e7eb;
+      --text-sub: #9ca3af;
+      --border-soft: rgba(148, 163, 184, 0.3);
+      --accent: #22c55e;
+      --badge-bg: rgba(148, 163, 184, 0.15);
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --radius-lg: 18px;
+      --radius-full: 999px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, -system-ui, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 40%, #020617 100%);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 40px 16px 60px;
+    }
+
+    .page {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    .header {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 24px 12px 40px;
+      }
+      .header {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 32px;
+      background: radial-gradient(circle at 30% 20%, #38bdf8, #0ea5e9 45%, #22c55e 80%);
+      position: relative;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.9);
+      overflow: hidden;
+    }
+
+    .avatar-ring {
+      position: absolute;
+      inset: 6px;
+      border-radius: 28px;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e5e7eb;
+      font-weight: 600;
+      font-size: 26px;
+      letter-spacing: 0.08em;
+    }
+
+    .headline-main {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 10px;
+    }
+
+    .name-role {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .name {
+      font-size: 30px;
+      font-weight: 750;
+      letter-spacing: 0.16em;
+    }
+
+    .title-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--text-sub);
+    }
+
+    .title-pill {
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.2), rgba(15, 23, 42, 0.2));
+      color: #e5e7eb;
+      font-size: 13px;
+    }
+
+    .summary {
+      background: linear-gradient(130deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98));
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 18px 18px 18px;
+      display: grid;
+      grid-template-columns: minmax(0, 3.2fr) minmax(0, 2.6fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .summary {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .summary-main {
+      font-size: 14px;
+      color: var(--text-sub);
+    }
+
+    .summary-main strong {
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .summary-meta {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+      font-size: 13px;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      align-items: center;
+    }
+
+    .meta-label {
+      color: var(--text-sub);
+      min-width: 60px;
+    }
+
+    .meta-value {
+      color: #e5e7eb;
+    }
+
+    .meta-badge {
+      padding: 3px 9px;
+      border-radius: var(--radius-full);
+      background: var(--badge-bg);
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .meta-link {
+      color: var(--primary);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(56, 189, 248, 0.5);
+    }
+
+    .meta-link:hover {
+      opacity: 0.9;
+    }
+
+    .main-grid {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.74fr) minmax(0, 1.2fr);
+      gap: 22px;
+    }
+
+    @media (max-width: 900px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), rgba(15, 23, 42, 0.98));
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card.secondary {
+      background: linear-gradient(140deg, rgba(15, 23, 42, 0.97), rgba(15, 23, 42, 0.99));
+      border-color: rgba(51, 65, 85, 0.9);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 650;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .card-title span {
+      opacity: 0.6;
+      font-weight: 500;
+      margin-left: 6px;
+      text-transform: none;
+      letter-spacing: 0.04em;
+    }
+
+    .card-tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      color: var(--text-sub);
+    }
+
+    .section-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .section-item {
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .section-item::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 8px;
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--primary);
+      box-shadow: 0 0 0 5px rgba(56, 189, 248, 0.16);
+    }
+
+    .item-title-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 6px 10px;
+      margin-bottom: 2px;
+    }
+
+    .item-title {
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .item-meta {
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .item-meta span + span::before {
+      content: "·";
+      margin: 0 4px;
+    }
+
+    .item-desc {
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    .item-desc strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .pill {
+      padding: 3px 9px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 11px;
+      color: var(--text-sub);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .pill.green {
+      border-color: rgba(34, 197, 94, 0.65);
+      color: #bbf7d0;
+      background: rgba(22, 101, 52, 0.22);
+    }
+
+    .pill.blue {
+      border-color: rgba(56, 189, 248, 0.7);
+      color: #e0f2fe;
+      background: rgba(30, 64, 175, 0.32);
+    }
+
+    .subsection-title {
+      margin-top: 8px;
+      margin-bottom: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 12px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skills-block-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e5e7eb;
+      margin-bottom: 4px;
+    }
+
+    .skills-text {
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    .skills-text strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: var(--text-sub);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.4);
+      padding-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <!-- 顶部信息区域 -->
+    <header class="header">
+      <div>
+        <div class="headline-main">
+          <div class="avatar">
+            <div class="avatar-ring">ZJ</div>
+          </div>
+          <div class="name-role">
+            <div class="name">周金鹏</div>
+            <div class="title-line">
+              <span class="title-pill">网络工程师</span>
+              <span class="title-pill">网络安全工程师</span>
+              <span>Network & Security Engineer</span>
+            </div>
+          </div>
+        </div>
+        <section class="summary">
+          <div class="summary-main">
+            <p>
+              深耕网络工程领域 <strong>4 年</strong>，具备扎实的网络协议与网络安全理论基础，并在
+              <strong>校园骨干网络升级</strong>、<strong>分布式网络攻防演练系统</strong>、
+              <strong>云数据中心虚拟化部署</strong> 等项目中积累了较为系统的实践经验。
+            </p>
+            <p style="margin-top: 6px;">
+              熟悉网络架构设计、网络安全防护、虚拟化与网络自动化脚本开发，具备良好的
+              <strong>问题分析与排障能力</strong>、<strong>团队协作能力</strong> 与
+              <strong>技术文档撰写能力</strong>。对网络工程与网络安全方向保持长期热情，希望在企业环境中持续打磨工程能力，为
+              <strong>打造高效、安全、可扩展的网络系统</strong> 提供可靠支持。
+            </p>
+          </div>
+          <div class="summary-meta">
+            <div class="meta-row">
+              <div class="meta-label">基本信息</div>
+              <div class="meta-value">男 · 24 岁</div>
+            </div>
+            <div class="meta-row">
+              <div class="meta-label">联系方式</div>
+              <div class="meta-value">
+                <span>电话：138XXXX8888</span> |
+                <a class="meta-link" href="mailto:zhoujinpeng@email.com">
+                  邮箱：zhoujinpeng@email.com
+                </a>
+              </div>
+            </div>
+            <div class="meta-row">
+              <div class="meta-label">求职意向</div>
+              <div class="meta-value">网络工程师 / 网络安全工程师</div>
+            </div>
+            <div class="meta-row">
+              <div class="meta-label">优势标签</div>
+              <div class="pill-row">
+                <span class="pill green">GPA 3.7 / 4.0（前 10%）</span>
+                <span class="pill blue">SDN / VXLAN / 云计算</span>
+                <span class="pill">HCIA · CCNA</span>
+                <span class="pill">校园骨干网升级实践</span>
+                <span class="pill">攻防演练系统开发</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <!-- 主体内容 -->
+    <section class="main-grid">
+      <!-- 左侧：教育 / 项目 / 实习 -->
+      <div>
+        <!-- 教育背景 -->
+        <article class="card">
+          <div class="card-header">
+            <h2 class="card-title">EDUCATION<span>教育背景 & 科研</span></h2>
+            <span class="card-tag">2020 - 2024</span>
+          </div>
+          <ul class="section-list">
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">普通本科院校 · 计算机系 · 网络工程专业</div>
+              </div>
+              <div class="item-meta">
+                <span>2020.09 - 2024.06</span>
+                <span>本科</span>
+                <span>GPA：3.7 / 4.0（专业前 10%）</span>
+              </div>
+              <div class="item-desc" style="margin-top: 4px;">
+                <strong>核心课程：</strong> 网络协议分析、网络安全原理、分布式系统、云计算与虚拟化、SDN 软件定义网络、
+                网络攻防技术、数据中心网络设计、人工智能与网络融合（成绩优良）。
+              </div>
+              <div class="subsection-title">科研与实验室经历</div>
+              <div class="item-meta">
+                学校网络与信息安全实验室 · 助理研究员（2022.09 - 2024.06）
+              </div>
+              <div class="item-desc">
+                参与导师主导的校级科研项目，围绕校园网络优化、攻防演练平台、数据中心虚拟化等方向开展研究，
+                负责实验环境搭建、数据采集与分析、技术文档撰写等工作。
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 项目经历 -->
+        <article class="card secondary" style="margin-top: 16px;">
+          <div class="card-header">
+            <h2 class="card-title">PROJECTS<span>核心项目经历</span></h2>
+            <span class="card-tag">Campus · Cloud · Security</span>
+          </div>
+          <ul class="section-list">
+            <!-- 项目一 -->
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">校园骨干网络升级与安全加固项目</div>
+              </div>
+              <div class="item-meta">
+                <span>2023.03 - 2023.12</span>
+                <span>核心成员 · 5 人团队</span>
+                <span>校园骨干网架构优化</span>
+              </div>
+              <div class="item-desc">
+                <strong>项目背景：</strong> 针对校园网络卡顿、安全隐患、骨干节点承载能力不足等问题，对校园骨干网进行
+                全面升级与安全加固，支撑 1 万+ 师生日常网络访问需求。
+              </div>
+              <div class="item-desc" style="margin-top: 4px;">
+                <strong>核心工作：</strong><br />
+                · 参与整体网络架构优化，协助设计 “核心层 - 汇聚层 - 接入层” 三层架构，引入 SDN 技术实现流量智能调度，
+                网络带宽提升约 100%，高峰期延迟降低约 40%。<br />
+                · 协助搭建网络安全防护体系，参与部署下一代防火墙、WAF 防护系统，发现并修复高危漏洞 3 处、中危漏洞 12 处，
+                有效提升校园网络安全性与稳定性。<br />
+                · 对接多家网络设备厂商，参与设备选型、部署及调试，优化路由策略与链路冗余设计，在保障性能的前提下降低运维成本约 20%。<br />
+                · 协助撰写项目技术报告和架构设计文档，形成可复用的校园网络优化方案，被周边 2-3 所高校参考与借鉴。
+              </div>
+              <div class="item-desc" style="margin-top: 4px;">
+                <strong>项目成果：</strong> 项目顺利落地并稳定运行，显著改善校园网络体验，本人获评学校 “优秀项目参与者”。
+              </div>
+            </li>
+
+            <!-- 项目二 -->
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">分布式网络攻防演练系统开发</div>
+              </div>
+              <div class="item-meta">
+                <span>2022.06 - 2022.12</span>
+                <span>开发成员</span>
+                <span>网络攻防演练平台</span>
+              </div>
+              <div class="item-desc">
+                <strong>项目背景：</strong> 为解决传统校园攻防演练场景单一、自动化程度低的问题，构建支持多场景、高仿真、
+                可扩展的分布式网络攻防演练系统，服务校内网络安全培训与教学。
+              </div>
+              <div class="item-desc" style="margin-top: 4px;">
+                <strong>核心工作：</strong><br />
+                · 基于 Go 语言参与实现系统核心模块，完成基础攻击场景模拟、漏洞环境生成、攻防结果统计等功能，
+                支持 200+ 并发用户同时参与演练。<br />
+                · 协助设计网络攻击路径模拟算法，集成 Metasploit、Nmap 等工具接口，实现基础自动化攻击脚本生成与执行，
+                演练效率提升约 30%。<br />
+                · 参与系统安全加固，防范演练过程中的恶意攻击溢出问题，保障平台在高并发场景下的稳定运行。<br />
+                · 协助优化系统界面与交互逻辑，撰写用户手册及基础技术文档，推动系统在校内多次正式使用。
+              </div>
+              <div class="item-desc" style="margin-top: 4px;">
+                <strong>项目成果：</strong> 系统获得校级软件著作权（登记号：2023SRXXXXXX），相关技术获得校级科技进步鼓励奖，
+                已支撑 2 场大型校内攻防演练，覆盖 500+ 参训人员。
+              </div>
+            </li>
+
+            <!-- 项目三 -->
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">云计算数据中心网络虚拟化部署项目</div>
+              </div>
+              <div class="item-meta">
+                <span>2021.09 - 2022.03</span>
+                <span>项目助手</span>
+                <span>云数据中心虚拟化</span>
+              </div>
+              <div class="item-desc">
+                <strong>项目背景：</strong> 协助导师完成校级云计算数据中心网络虚拟化部署，实现资源池化管理，提升整体资源利用率与扩展能力。
+              </div>
+              <div class="item-desc" style="margin-top: 4px;">
+                <strong>核心工作：</strong><br />
+                · 协助基于 OpenStack、Kubernetes 搭建虚拟化平台，参与网络资源动态分配和负载均衡配置，
+                使数据中心资源利用率由约 60% 提升至约 75%。<br />
+                · 协助配置 VXLAN 隧道技术，解决虚拟化环境下多租户网络隔离与跨主机通信问题，优化网络转发效率，
+                数据传输延迟降低约 8ms。<br />
+                · 参与开发网络监控 Dashboard，实时监测网络流量和设备状态，实现基础异常告警自动化，运维工作量减少约 40%。
+              </div>
+              <div class="item-desc" style="margin-top: 4px;">
+                <strong>项目成果：</strong> 成功支撑 2 个校级科研项目数据处理需求，技术方案被纳入学校优秀科研案例。
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 实习经历 -->
+        <article class="card secondary" style="margin-top: 16px;">
+          <div class="card-header">
+            <h2 class="card-title">EXPERIENCE<span>实习 & 实践经历</span></h2>
+            <span class="card-tag">Industry · SOC</span>
+          </div>
+          <ul class="section-list">
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">中型网络科技有限公司 · 网络技术部 · 实习生</div>
+              </div>
+              <div class="item-meta">
+                <span>2023.07 - 2023.09</span>
+              </div>
+              <div class="item-desc">
+                · 参与云数据中心网络架构优化项目，协助完成路由策略调整与 SDN 基础部署，整体网络稳定性提升至约 99.8%。<br />
+                · 参与内部网络安全漏洞挖掘与排查，提交中高危漏洞 2 处，获评公司 “优秀实习生”。
+              </div>
+            </li>
+
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">地方网络安全应急响应中心 · 实习研究员</div>
+              </div>
+              <div class="item-meta">
+                <span>2022.07 - 2022.08</span>
+              </div>
+              <div class="item-desc">
+                · 参与地方网络安全应急演练，协助分析攻击行为与攻击链路，累计撰写应急响应报告 5 份以上。<br />
+                · 协助搭建基础网络安全监测平台，优化漏洞预警机制与告警流程，预警响应速度提升约 20%。
+              </div>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- 右侧：技能 / 荣誉 / 论文专利 / 自我评价 -->
+      <div>
+        <!-- 核心技能 -->
+        <article class="card">
+          <div class="card-header">
+            <h2 class="card-title">SKILLS<span>核心技能</span></h2>
+            <span class="card-tag">Network · Security · Dev</span>
+          </div>
+
+          <div class="skills-grid">
+            <div>
+              <div class="skills-block-title">网络架构 & 协议</div>
+              <p class="skills-text">
+                · 熟练掌握 <strong>TCP/IP</strong>、<strong>OSI 七层模型</strong>，可独立设计中小型企业网络架构。<br />
+                · 熟悉 <strong>SDN / NFV / VXLAN</strong> 等前沿技术，参与过千节点级网络拓扑设计与优化。<br />
+                · 具备较强的网络规划、性能优化与故障排查能力。
+              </p>
+            </div>
+            <div>
+              <div class="skills-block-title">网络安全 & 攻防</div>
+              <p class="skills-text">
+                · 掌握渗透测试、漏洞挖掘基础流程与常见威胁类型。<br />
+                · 熟悉 <strong>防火墙（Cisco、华为）</strong>、<strong>WAF</strong>、<strong>IDS/IPS</strong> 部署与基础运维。<br />
+                · 持有 <strong>HCIA</strong>（华为认证网络工程师）、<strong>CCNA</strong>（思科认证网络工程师）证书。
+              </p>
+            </div>
+          </div>
+
+          <div class="skills-grid" style="margin-top: 10px;">
+            <div>
+              <div class="skills-block-title">开发 & 自动化运维</div>
+              <p class="skills-text">
+                · 熟练使用 <strong>Python、C</strong> 开发基础网络工具与脚本。<br />
+                · 熟悉 <strong>OpenFlow、OpenStack、Kubernetes</strong> 基础操作。<br />
+                · 能参与网络自动化脚本开发与网络监控系统搭建。
+              </p>
+            </div>
+            <div>
+              <div class="skills-block-title">设备 & 工具 & 语言</div>
+              <p class="skills-text">
+                · 熟悉 <strong>Cisco、华为、H3C</strong> 等厂商网络设备配置。<br />
+                · 熟练使用 <strong>Wireshark、Nmap</strong> 等网络分析工具，掌握 Linux/Unix 基础运维。<br />
+                · 英语：<strong>CET-6</strong>，可阅读/撰写技术文档；日语：<strong>N3</strong>，可阅读基础技术资料。
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 荣誉奖项 -->
+        <article class="card secondary" style="margin-top: 16px;">
+          <div class="card-header">
+            <h2 class="card-title">AWARDS<span>荣誉奖项</span></h2>
+            <span class="card-tag">Scholarship · Contest</span>
+          </div>
+          <ul class="section-list">
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">省级大学生网络技术大赛 · 三等奖</div>
+              </div>
+              <div class="item-meta">
+                <span>2023 年</span>
+              </div>
+            </li>
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">校级一等奖学金</div>
+              </div>
+              <div class="item-meta">
+                <span>2023 年</span>
+              </div>
+            </li>
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">省级大学生信息安全竞赛 · 优秀奖</div>
+              </div>
+              <div class="item-meta">
+                <span>2022 年</span>
+              </div>
+            </li>
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">校级 “学术积极分子”</div>
+              </div>
+              <div class="item-meta">
+                <span>2022 年</span>
+              </div>
+            </li>
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">全国计算机等级考试 · 四级网络工程师</div>
+              </div>
+              <div class="item-meta">
+                <span>2021 年</span>
+              </div>
+            </li>
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">校级 “三好学生”（连续两年）</div>
+              </div>
+              <div class="item-meta">
+                <span>2021 - 2023 年</span>
+              </div>
+            </li>
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">校级 “优秀本科毕业生”</div>
+              </div>
+              <div class="item-meta">
+                <span>2023 年</span>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 学术成果与专利 -->
+        <article class="card secondary" style="margin-top: 16px;">
+          <div class="card-header">
+            <h2 class="card-title">PUBLICATIONS<span>学术成果 & 专利</span></h2>
+            <span class="card-tag">Paper · Patent</span>
+          </div>
+          <ul class="section-list">
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">《SDN 技术在校园骨干网络中的优化应用研究》</div>
+              </div>
+              <div class="item-meta">
+                <span>校级核心期刊</span>
+                <span>2023 年第 8 期</span>
+              </div>
+              <div class="item-desc">
+                参与撰写，主要负责实验方案设计与结果分析，通过 SDN 技术优化校园骨干网络的性能与可运维性。
+              </div>
+            </li>
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">《分布式网络攻防演练系统的设计与实现》</div>
+              </div>
+              <div class="item-meta">
+                <span>校级期刊</span>
+                <span>2022 年第 12 期</span>
+              </div>
+              <div class="item-desc">
+                参与撰写，主要参与系统架构设计与关键技术实现，总结分布式攻防演练平台在教学与实训中的应用经验。
+              </div>
+            </li>
+            <li class="section-item">
+              <div class="item-title-line">
+                <div class="item-title">专利：一种基于 AI 的网络漏洞自动挖掘方法</div>
+              </div>
+              <div class="item-meta">
+                <span>专利号：ZL2023XXXXXXX</span>
+                <span>第三发明人</span>
+              </div>
+              <div class="item-desc">
+                参与漏洞特征建模与自动化检测流程设计，探索利用 AI 技术提升网络漏洞发现效率与准确率。
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 自我评价 -->
+        <article class="card secondary" style="margin-top: 16px;">
+          <div class="card-header">
+            <h2 class="card-title">PROFILE<span>自我评价</span></h2>
+            <span class="card-tag">Mindset · Potential</span>
+          </div>
+          <div class="item-desc">
+            · 在网络工程与网络安全方向持续深耕，具备完备的基础理论与多场景项目实战经历，能够快速理解业务需求并落地技术方案。<br />
+            · 重视 <strong>数据与日志驱动</strong> 的问题分析方式，善于将复杂问题拆解为可执行的小步骤并沉淀为可复用的解决方案。<br />
+            · 具备良好的团队协作与沟通能力，乐于在团队中承担关键模块与文档建设工作。<br />
+            · 对新技术保持持续学习热情，愿意在实际生产环境中不断打磨工程细节，为企业构建
+            <strong>高效 · 稳定 · 安全</strong> 的网络基础设施贡献力量。
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© 周金鹏 · Web Resume</div>
+      <div>如需 PDF/英文版简历，可通过邮箱联系获取。</div>
+    </footer>
+  </main>
+</body>
+</html>
